@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script type="text/javascript" src="luckysevens.js"></script>
+        <title>Lucky Sevens</title>
+
+    <!-- formatting to make UI look nicer-->
+        <style>
+            h1{
+                text-align: center;
+            }
+            #results{
+                margin:auto;
+                width: 10%;
+
+            }
+            
+            tbody tr:nth-child(odd) {
+                background-color: lightslategrey;
+                
+            }
+
+            hr{
+                width: 50%;
+            }
+        
+            table{
+                border-collapse: collapse;
+            }
+        </style>
+
+    </head>
+
+    <body>
+
+        <header><h1>Lucky Sevens</h1></header>
+        <div id="startingInput" style="text-align: center; display: block;">
+            <div>Starting Bet:  <input type="text" id="starting" placeholder="$0.00"></div><br />
+            <button id="play" onclick="play()" style="text-align: center;">Play</button>    
+        </div> <br/><hr/>
+        
+        
+        <!--creating table for results-->
+        <div id="results" style="text-align:center; display:none;">
+            <h2>Results</h2>
+            <table id="resultsTable" border="1" style="margin: auto;">
+                <tbody>
+                <tr>
+                    <td>Starting Bet</td>
+                    <td>$<span id="startingbet"></span></td>
+                </tr>
+                <tr>
+                    <td>Total Rolls Before Going Broke</td>
+                    <td><span id="broke_roll_count"></span></td>
+                </tr>
+                <tr>
+                    <td>Highest Amount Won</td>
+                    <td>$<span id="max_money"></span></td>
+                </tr>
+                <tr>
+                    <td>Roll Count at Highest Amount Won</td>
+                    <td><span id="max_count"></span></td>
+                </tr>
+                </tbody>
+            </table>
+
+
+            </div>
+        </div>
+    </body>
+
+
+
+
+<html>
